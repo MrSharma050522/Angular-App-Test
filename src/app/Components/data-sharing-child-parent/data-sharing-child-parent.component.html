@@ -1,0 +1,4 @@
+<!-- <p>data-sharing-child-parent works! {{data}}</p> -->
+<input type="text" placeholder="Sharing Data from child to parent" #input>
+<button (click)="sendDataHandler.emit(input.value)">Click</button>
+<!-- <button (click)="sendDataHandler(input.value)">Click</button> -->

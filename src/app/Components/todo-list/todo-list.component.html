@@ -1,0 +1,19 @@
+<h1>About Child Routing</h1>
+<a routerLink="about-template">Template</a><br>
+<a routerLink="about-style">Style</a><br>
+<router-outlet></router-outlet>
+<!-- ToDo List App -->
+<h1>To Do List</h1>
+<form>
+	<input type="text" placeholder="Enter task here" #task />
+	<button (click)="addTaskHandler(task.value)">Add Task</button>
+	<div *ngIf="edit">
+		<input type="text" placeholder="Edit Task" #editedValue />
+		<button (click)="editTaskHandlerSubmit(editedValue.value)">Submit</button>
+	</div>
+	<div *ngFor="let todo of todos">
+		<h4>{{ todo }}</h4>
+		<button (click)="deleteTaskHandler(todo)">Delete</button>
+		<button (click)="editTaskHandler(todo)">Edit</button>
+	</div>
+</form>

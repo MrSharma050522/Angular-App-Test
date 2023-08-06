@@ -1,0 +1,343 @@
+<hr style="border: 1px solid blue" />
+<div style="display: flex; justify-content: center">
+	<h3 style="color: red">{{ title }}</h3>
+</div>
+<hr style="border: 1px solid blue" />
+
+<!---------------------------------------------------------------------------------------------------------------------------------------------->
+<!-- LAZY LOADING COMPONENT-->
+<!-- <button (click)="loadAdminHandler()">Load Admin List</button>
+<button (click)="loadUserHandler()">Load User List</button> -->
+
+<!---------------------------------------------------------------------------------------------------------------------------------------------->
+<!-- LAZY LOADING MODULE-->
+<!-- <ul>
+	<h3>Admin Page</h3>
+	<li><a routerLink="admin/admin-login">Login</a></li>
+	<li><a routerLink="admin/admin-list">List</a></li>
+</ul>
+<ul>
+	<h3>User Page</h3>
+	<li><a routerLink="user/user-login">Login</a></li>
+	<li><a routerLink="user/user-list">List</a></li>
+</ul>
+<router-outlet></router-outlet> -->
+
+<!---------------------------------------------------------------------------------------------------------------------------------------------->
+<!-- GROUP ROUTING -->
+<!-- <ul>
+	<h3>Admin Page</h3>
+	<li><a routerLink="admin/login">Login</a></li>
+	<li><a routerLink="admin/list">List</a></li>
+</ul>
+<ul>
+	<h3>User Page</h3>
+	<li><a routerLink="user/login">Login</a></li>
+	<li><a routerLink="user/list">List</a></li>
+</ul>
+<router-outlet></router-outlet> -->
+
+<!---------------------------------------------------------------------------------------------------------------------------------------------->
+<!-- MODULE ROUTING -->
+<!-- <ul>
+	<li><a routerLink="admin-login">Admin Login</a></li>
+	<li><a routerLink="admin-list">Admin List</a></li>
+	<li><a routerLink="user-list">User List</a></li>
+	<li><a routerLink="user-login">User Login</a></li>
+</ul>
+<router-outlet></router-outlet> -->
+
+<!---------------------------------------------------------------------------------------------------------------------------------------------->
+<!-- MODAL -->
+<!-- <app-login></app-login>
+<app-signup></app-signup> -->
+
+<!---------------------------------------------------------------------------------------------------------------------------------------------->
+<!-- POST API -->
+<!-- <app-post-api></app-post-api> -->
+
+<!---------------------------------------------------------------------------------------------------------------------------------------------->
+<!-- API CALLING -->
+<!-- <ul>
+	<li *ngFor="let user of usersApiData">{{ user.name }}</li>
+</ul>
+<app-login></app-login> -->
+<!---------------------------------------------------------------------------------------------------------------------------------------------->
+<!-- SERVICES -->
+<!-- <ul>
+	<li *ngFor="let value of objectArray">{{value.name}}</li>
+</ul>
+<app-login></app-login> -->
+
+<!---------------------------------------------------------------------------------------------------------------------------------------------->
+<!-- ROUTING IN ANGULAR -->
+<app-header></app-header>
+<router-outlet></router-outlet>
+
+<!---------------------------------------------------------------------------------------------------------------------------------------------->
+<!-- DIRECTIVES -->
+<!-- <h1>{{ title }}</h1> -->
+<!-- applied color using custom directives -->
+<!-- <h1 appRedEl>{{ title }}</h1>  -->
+
+<!---------------------------------------------------------------------------------------------------------------------------------------------->
+<!-- REACTIVE FORM & VALIDATIONS-->
+<!-- <form [formGroup]="reactiveLoginForm" (ngSubmit)="submitFormHandler()">
+	<input
+		type="text"
+		placeholder="Enter name"
+		name="user"
+		formControlName="user"
+	/><br />
+	<span style="color:red" *ngIf="userValidation && userValidation.invalid && userValidation.touched">Name is a required field</span><br>
+	<input
+		type="password"
+		placeholder="Enter password"
+		name="password"
+		formControlName="password"
+	/><br />
+	<span style="color:red" *ngIf="passwordValidation && passwordValidation.invalid && passwordValidation.touched">Password is a required field</span><br>
+	<button [disabled]="reactiveLoginForm.invalid">Login</button>
+</form> -->
+
+<!---------------------------------------------------------------------------------------------------------------------------------------------->
+<!-- TEMPLATE FORM -->
+<!-- <form #templateForm="ngForm" (ngSubmit)=userLogin(templateForm.controls)> -->
+<!-- <form #templateForm="ngForm" (ngSubmit)=userLogin(templateForm.value)>
+	<input type="text" placeholder="Enter name here" name="name" ngModel><br>
+	<input type="password" placeholder="Enter password here" name="password" ngModel ><br>
+	<button>Submit</button>
+</form> -->
+<!-- <button (click)="userLogin(templateForm.value)">Out Side Form</button> -->
+
+<!---------------------------------------------------------------------------------------------------------------------------------------------->
+<!-- BASIC OF PIPES -->
+<!-- <h1>{{title | uppercase}}</h1>
+	<h2>{{title | lowercase}}</h2>
+	<h4>{{"welcome to the world champ" | titlecase}}</h4>
+	<h3>{{today}}</h3>
+	<h3>{{today | date}}</h3>
+	<h3>{{today | date : "fullDate"}}</h3> -->
+
+<!-- ADVANCE OF PIPES -->
+<!-- <h1>{{title | slice : 3}}</h1>
+	<h1>{{title | slice : 3 : 6 }}</h1>
+	<h1>{{title | slice : 3 : 6 | uppercase}}</h1>
+	<h2>{{user | json}}</h2>
+	<h2>{{user | json | uppercase}}</h2>
+	<h3>{{2000.3000 | number : "2.2-3"}}</h3>
+	<h3>{{2000.3000 | number : "2.3-3"}}</h3>
+	<h3>{{2000.3000 | number : "3.3-3"}}</h3>
+	<h3>{{20 | currency}}</h3>
+	<h3>{{20 | currency : "USD"}}</h3>
+<h3>{{20 | currency : "GBP"}}</h3>
+<h3>{{20 | currency : "INR"}}</h3>
+<h3>{{2.3 | number : "3.3-5"}}</h3> -->
+
+<!-- CUSTOM PIPES -->
+<!-- <h1>{{20 | usdToInr : 85 }}</h1> -->
+
+<!---------------------------------------------------------------------------------------------------------------------------------------------->
+
+<!-- TOW WAY BINDING -->
+<!-- <h1>{{ variable1 }}</h1>
+<input type="text" [(ngModel)]="variable1" placeholder="Input box - 1" />
+<h1>{{ variable2 }}</h1>
+<input type="text" [(ngModel)]="variable2" placeholder="Input box - 2"/> -->
+
+<!---------------------------------------------------------------------------------------------------------------------------------------------->
+
+<!-- TWO WAYS OF RECEIVING DATA FROM CHILD ONE USING FUNCTION AND ANOTHER ONE IS USING EMITTER -->
+<!-- <h1>{{sharingData}} in parent component</h1> -->
+<!-- <app-data-sharing-child-parent [sendDataHandler]="updateDataHandler"  [data]="sharingData"></app-data-sharing-child-parent> -->
+<!-- <app-data-sharing-child-parent (sendDataHandler)="updateDataHandler($event)"  [data]="sharingData"></app-data-sharing-child-parent> -->
+
+<!---------------------------------------------------------------------------------------------------------------------------------------------->
+
+<!-- COMPONENTS REUSABILITY -->
+<!-- <div *ngFor="let user of objectArray">
+	<app-data-sharing-parent-child [item]="user"></app-data-sharing-parent-child>
+</div> -->
+
+<!---------------------------------------------------------------------------------------------------------------------------------------------->
+
+<!-- TODO LIST -->
+<!-- <input type="text" placeholder="Enter Task" #task>
+<button (click)="addTaskHandler(task.value)">Add</button>
+<div *ngFor="let text of itemList">
+	<h3>{{text.item}}</h3>
+	<button (click)="deleteTaskHandler(text.id)">Delete</button>
+</div> -->
+
+<!---------------------------------------------------------------------------------------------------------------------------------------------->
+
+<!-- MATERIAL UI -->
+<!-- <div class="example-label">Raised</div>
+<div class="example-button-row">
+	<button mat-raised-button>Basic</button>
+	<hr style="background-color: blue; border-color: transparent" />
+	<button mat-raised-button color="primary">Primary</button>
+	<hr style="background-color: blue; border-color: transparent" />
+	<button mat-raised-button color="accent">Accent</button>
+	<hr style="background-color: blue; border-color: transparent" />
+	<button mat-raised-button color="warn">Warn</button>
+	<hr style="background-color: blue; border-color: transparent" />
+	<button mat-raised-button disabled>Disabled</button>
+	<hr style="background-color: blue; border-color: transparent" />
+	<button mat-raised-button>Link</button>
+	<hr style="background-color: blue; border-color: transparent" />
+</div>
+<br /><br />
+<div class="demo-section">
+	Button with a badge on the left
+	<button
+		mat-raised-button
+		color="primary"
+		matBadge="8"
+		matBadgePosition="after"
+		matBadgeColor="accent"
+	>
+		Action
+	</button>
+</div>
+
+<mat-slide-toggle>Toggle me!</mat-slide-toggle> -->
+
+<!---------------------------------------------------------------------------------------------------------------------------------------------->
+
+<!-- BASIC FORM -->
+<!-- <app-header></app-header>
+<form #basicForm="ngForm" (submit)="formSubmitHandler(basicForm.value)">
+	<label for="Name">Name : </label>
+	<input type="text" ngModel name="name" placeholder="Enter User Name" />
+	<br /><br />
+	<label for="Name">Number : </label>
+	<input type="number" ngModel name="phone" placeholder="Enter Phone Number" />
+	<br /><br />
+	<label for="Name">Email : </label>
+	<input type="email" ngModel name="email" placeholder="Enter Email" />
+	<br /><br />
+	<button>Submit</button>
+</form>
+<h4 *ngFor="let user of userData">
+	Name : {{ user.name }} , Email : {{ user.email }} , Phone : {{ user.phone }}
+</h4> -->
+
+<!---------------------------------------------------------------------------------------------------------------------------------------------->
+
+<!-- FOR LOOP -->
+<!-- <ul *ngFor="let user of objectArray">
+	<li>{{ user.name }} and age is {{ user.age }}</li>
+	<ul *ngFor="let skill of user.skills">
+		<li>{{ skill }}</li>
+	</ul>
+</ul> -->
+
+<!-- <p *ngFor="let key of array">{{ key }}</p>
+<div *ngFor="let obj of objectArray">
+	<h4>{{ obj.name }} whose age is {{ obj.age }}</h4>
+</div> -->
+
+<!---------------------------------------------------------------------------------------------------------------------------------------------->
+
+<!-- SWITCH CASE -->
+<!-- <div [ngSwitch]="color">
+	<h1 *ngSwitchCase="'red'" style="background-color: red">RED</h1>
+	<h1 *ngSwitchCase="'green'" style="background-color: green">GREEN</h1>
+	<h1 *ngSwitchCase="'blue'" style="background-color: blue">BLUE</h1>
+	<h1 *ngSwitchCase="'yellow'" style="background-color: yellow">YELLOW</h1>
+	<h1 *ngSwitchDefault="" style="background-color: orange">DEFAULT</h1>
+</div> -->
+
+<!---------------------------------------------------------------------------------------------------------------------------------------------->
+
+<!-- IF ELSE AND ELSE IF -->
+<!-- <ng-template [ngIf]="color == 'red'">
+	<h1 style="color: red">Red Color</h1>
+</ng-template>
+<ng-template [ngIf]="color == 'green'">
+	<h1 style="color: green">Green Color</h1>
+</ng-template>
+<ng-template [ngIf]="color == 'blue'">
+	<h1 style="color: blue">Blue Color</h1>
+</ng-template> -->
+<!-- <button (click)="colorToggleHandler()">Toggle</button> -->
+
+<!---------------------------------------------------------------------------------------------------------------------------------------------->
+
+<!-- <p *ngIf="disable == 'yes'; then even else odd"></p>
+<ng-template #odd>
+	<h1>Odd</h1>
+</ng-template>
+<ng-template #even>
+	<h1>Even</h1>
+</ng-template> -->
+
+<!-- <h1 *ngIf="disable; else odd">Even</h1> -->
+<!-- <h1 *ngIf="!disable">Odd</h1> -->
+
+<!-- <button (click)="disableToggleHandler()">{{ disable == "yes" ? "Odd" : "Even" }}</button> -->
+
+<!---------------------------------------------------------------------------------------------------------------------------------------------->
+
+<!-- <input type="text" name="user-name" placeholder="Interpolation" value={{name}} disabled={{disable}}> <br>
+<input type="text" name="user-name" placeholder="Property-Binding" [value]=name [disabled]=disable /> <br>
+<button (click)="disableToggleHandler()">Toggle</button> <br> -->
+
+<!---------------------------------------------------------------------------------------------------------------------------------------------->
+
+<!-- <h1 class="heading" style="color: yellow; background-color: red;">Hello Angular Learner !</h1>
+<style>
+  .heading{
+    color: blue;
+  }
+  .custom{
+    color: green;
+    background-color: blue;
+  }
+</style> -->
+
+<!---------------------------------------------------------------------------------------------------------------------------------------------->
+
+<!-- <input type="text" placeholder="Enter Name" name="name" #input >
+<button (click)="getNameValue(input.value)">Click</button>
+<p>{{name}}</p> -->
+
+<!---------------------------------------------------------------------------------------------------------------------------------------------->
+
+<!-- <h2 (mouseover)="inputEventHandler('Mouse Hovering')">Mouse Over</h2>
+<h2 (mouseleave)="inputEventHandler('Mouse Leaving')">Mouse Leave</h2>
+<h2 (mousemove)="inputEventHandler('Mouse Moving')">Mouse Move</h2>
+<h2 (mousedown)="inputEventHandler('Mouse Down')">Mouse Down</h2>
+<h2 (mouseenter)="inputEventHandler('Mouse Enter')">Mouse Enter</h2>
+<h2 (mouseup)="inputEventHandler('Mouse Up')">Mouse Up</h2>
+<h2 (mouseout)="inputEventHandler('Mouse Out')">Mouse Out</h2>
+<h2 (mousewheel)="inputEventHandler('Mouse Wheel')">Mouse Wheel</h2>
+<button (click)="getData()">Click</button>
+<br><br>
+<input type="text" placeholder="KeyUp Event" #inputValue1 (keyup)="inputEventHandler(inputValue1.value)">
+<br><br>
+<input type="text" placeholder="KeyDown Event" #inputValue2 (keydown)="inputEventHandler(inputValue2.value)">
+<br><br>
+<input type="text" placeholder="KeyPress Event" #inputValue3 (keypress)="inputEventHandler(inputValue3.value)">
+<br><br>
+<input type="text" placeholder="Blur Event" #inputValue4 (blur)="inputEventHandler(inputValue4.value)">
+<br><br>
+<input type="text" placeholder="Input Event" #inputValue5 (input)="inputEventHandler(inputValue5.value)"> -->
+
+<!---------------------------------------------------------------------------------------------------------------------------------------------->
+
+<!-- <h2>{{ count }}</h2> -->
+<!-- <button (click)="countHandler('+')">Increment</button>
+<button (click)="countHandler('-')">Decrement</button> -->
+<!-- <button (click)="promptHandler('Maine Click Kia', 123)">Danger</button> -->
+
+<!---------------------------------------------------------------------------------------------------------------------------------------------->
+
+<!-- <app-inline-style></app-inline-style> -->
+<!-- <app-inline-template></app-inline-template> -->
+<!-- <app-inline-style-template></app-inline-style-template> -->
+<!-- <app-login></app-login>  -->
+<!-- <app-todo-list></app-todo-list> -->
+
+<!---------------------------------------------------------------------------------------------------------------------------------------------->
