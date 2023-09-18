@@ -9,6 +9,6 @@ export class RedElDirective {
 		el.nativeElement.style.backgroundColor = "blue";
 		el.nativeElement.style.borderRadius = "5px";
 		el.nativeElement.style.padding = "5px";
-		el.nativeElement.textContent = "Something Weird ";
+		el.nativeElement.textContent = "Custom Directives ->  ";
 	}
 }

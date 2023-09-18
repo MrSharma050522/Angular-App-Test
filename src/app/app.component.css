@@ -1,16 +1,123 @@
-input{
-    margin-left: 10px;
+input {
+	margin-left: 10px;
 }
-form{
-    margin: 10px;
+form {
+	margin: 10px;
 }
-*{
-    justify-self: center;
-    margin: 10px;
+* {
+	justify-self: center;
+	margin: 10px;
 }
-button{
-    background-color: green;
-    border: 2px solid green;
-    border-radius: 5px;
-    color: white;
+button {
+	background-color: green;
+	border: 2px solid green;
+	border-radius: 5px;
+	color: white;
+}
+/* --------------------------------------------------------------- */
+/* PAGE LOADER */
+.ring {
+	width: 50px;
+	height: 50px;
+	border: 0px solid #000;
+	border-radius: 50%;
+	position: absolute;
+}
+.ring:nth-child(1) {
+	border-bottom-width: 8px;
+	border-color: rgb(220, 8, 8);
+	animation: rotate1 2s linear infinite;
+}
+.ring:nth-child(2) {
+	border-bottom-width: 8px;
+	border-color: rgb(2, 242, 2);
+	animation: rotate2 2s linear infinite;
+}
+.ring:nth-child(3) {
+	border-bottom-width: 8px;
+	border-color: rgb(12, 27, 232);
+	animation: rotate3 2s linear infinite;
+}
+@keyframes rotate1 {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(120deg);
+	}
+}
+@keyframes rotate2 {
+	0% {
+		transform: rotate(120deg);
+	}
+	100% {
+		transform: rotate(240deg);
+	}
+}
+@keyframes rotate3 {
+	0% {
+		transform: rotate(240deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+/* --------------------------------------------------------------- */
+/* BOX TURN ANIMATION */
+.box {
+	width: 200px;
+	height: 200px;
+	position: relative;
+	transform-style: preserve-3d;
+	animation: spin 8s infinite linear;
+}
+.card {
+	width: 160px;
+	height: 160px;
+	background-color: aquamarine;
+	color: white;
+	transition: transform 0.5s;
+}
+.card:hover {
+	transform: rotateY(180deg);
+}
+
+/* --------------------------------------------------------------- */
+/* TYPING EFFECT */
+.typing-effect {
+	position: relative;
+}
+
+.text {
+	white-space: nowrap;
+	overflow: hidden;
+	animation: typing 4s steps(40) infinite, blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+	from {
+		width: 0;
+	}
+	to {
+		width: 100%;
+	}
+}
+
+.cursor {
+	display: inline-block;
+	width: 8px;
+	height: 18px;
+	background-color: black;
+	margin-left: 2px;
+	animation: blink-caret 2.5s step-end infinite;
+}
+
+@keyframes blink-caret {
+	from,
+	to {
+		border-color: transparent;
+	}
+	/* 50% {
+      border-color: black;
+    } */
 }

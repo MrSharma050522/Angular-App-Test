@@ -27,6 +27,12 @@ import { AdminModule } from "./Modules/admin/admin.module";
 import { UserListComponent } from "./Components/user-list/user-list.component";
 import { UserLoginComponent } from "./Components/user-login/user-login.component";
 import { UserModule } from "./Modules/user/user.module";
+import { BoxShadowAnimationComponent } from './Components/box-shadow-animation/box-shadow-animation.component';
+import { FlagComponent } from './Components/flag/flag.component';
+import { LudwigEffectComponent } from './Components/ludwig-effect/ludwig-effect.component';
+import { InputShakeComponent } from './Components/input-shake/input-shake.component';
+import { GreyImageComponent } from './Components/grey-image/grey-image.component';
+import { ImageBackgrounMixComponent } from './Components/image-backgroun-mix/image-backgroun-mix.component';
 
 @NgModule({
 	declarations: [
@@ -45,6 +51,12 @@ import { UserModule } from "./Modules/user/user.module";
 		AdminLoginComponent,
 		UserListComponent,
 		UserLoginComponent,
+  BoxShadowAnimationComponent,
+  FlagComponent,
+  LudwigEffectComponent,
+  InputShakeComponent,
+  GreyImageComponent,
+  ImageBackgrounMixComponent,
 	],
 	imports: [
 		BrowserModule,

@@ -1,0 +1,10 @@
+.box{
+    float: left;
+    border-radius: 5px;
+    margin: 50px;
+    filter: grayscale(200%);
+    transition: filter 300ms;
+}
+.box:is(:hover, :focus){
+    filter: grayscale(0%);
+}

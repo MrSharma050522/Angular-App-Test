@@ -1,0 +1,30 @@
+.input{
+    margin: 5px;
+    color: dimgray;
+    border: black solid blue;
+}
+.input:invalid{
+    /* animation: justShake 0.3s forwards; */
+    /* animation: justShake 0.3s infinite; */
+    animation: justShake 0.3s backwards;
+    color: red;
+    border: black solid red;
+}
+
+@keyframes justShake {
+    0%{
+        transform: translate(-5px);
+    }
+    25%{
+        transform: translate(5px);
+    }
+    50%{
+        transform: translate(-5px);
+    }
+    75%{
+        transform: translate(5px);
+    }
+    100%{
+        transform: translate(-5px);
+    }
+}

@@ -5,6 +5,8 @@
 } */
 body{
     margin: 0;
+    /* this background color is applied to check the mix-blend property of image-background-mix component */
+    /* background-color: aquamarine; */
 }
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
